@@ -1,0 +1,26 @@
+version: 3
+
+server: https://app.fossa.com
+
+project:
+  locator: git+github.com/vishal-thenge/dvna
+  id: git+github.com/vishal-thenge/dvna
+  name: dvna
+  team: Cloudera
+  teams: 
+    - Cloudera
+    - cli-team-2
+  
+targets:
+  only:
+    - type: maven
+      path: foo/bar
+  exclude:
+    - type: bundler
+
+paths:
+  only:
+    - ./vendor/django
+    - ./test
+  exclude:
+    - ./vendor/django/test
